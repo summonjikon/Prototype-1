@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 2347162}
   - component: {fileID: 1622218990189248518}
   m_Layer: 0
-  m_Name: Veh_Bus_Blue_Z
+  m_Name: Bus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
