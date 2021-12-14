@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     public Camera thirdPerson;
     public Camera firstPerson;
 
+    public string inputID;
+
+    public KeyCode key;
+
 
 
     // Start is called before the first frame update
@@ -25,13 +29,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal" + inputID);
+        verticalInput = Input.GetAxis("Vertical" + inputID);
 
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
 
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if(Input.GetKeyDown(key))
         {
             thirdPerson.enabled = !thirdPerson.enabled;
             firstPerson.enabled = !firstPerson.enabled; 
